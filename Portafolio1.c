@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-// Fuincion que recibe un numero entero y determina la cantidad de digitos pares e impares,
+// fincion que recibe un numero entero y determina la cantidad de digitos pares e impares,
 // si es palindromo y lo imprime en orden inverso.
 
 void paresimpares (int a) {
@@ -35,48 +35,45 @@ void paresimpares (int a) {
 }
 
 
+
+// función que recibe un numero decimal y lo separa en parte entera y parte decimal, imprimiendo cada dígito por separado.
+
 void separar (float a){
     int entero = 0;
     int coma = 0;
 
-    
-
-    char str[50]; 
-
-    sprintf(str, "%f", a);
-
+    char cadena[50]; 
+    sprintf(cadena, "%g", a); 
     bool validar = false ;
+    int i = 0;
+    while (cadena[i] != '\0') {
 
-    for (int i = 0; i < strlen(str) ; i++) {
-        if (str[i] == '.') {
+        if (cadena[i] == '.') {
             validar = true;
+            i++;
             continue;
         }
         if (validar) {
-            int temp = str[i] - '0';
-            printf("Los numeros decimales: %d\n", temp);
+            int temp = cadena[i] - '0';
             coma = coma * 10 + temp;
             
         } else {
-            int temp = str[i] - '0';  
+            int temp = cadena[i] - '0';  
             entero = entero * 10 + temp;
         }
+        i++;
     }
-
     printf("Los numeros enteros: %d\n", entero);
     printf("Los numeros decimales: %d\n", coma);
 }
 
 
 
-
-
 int main() {
     float a;
-    printf("Ingrese el primer numero: ");
-    scanf("%f", &a);
+    printf("Ingrese un numero flotante: ");
+    scanf("%f", &a);           
     separar(a);
-    
     return 0;
 }
 
