@@ -1,8 +1,6 @@
 
 #include <stdio.h>
-
-
-
+ 
 
 // Función para intercambiar dos números usando punteros
 void  swich (int *a, int *b) {
@@ -39,7 +37,9 @@ int main()
 
 	int Arreglo[] = {2,4,6,78,9};
 	int n = sizeof(Arreglo) / sizeof(Arreglo[0]);
+
 	int *ptr = Arreglo; 
+ 
     printf("Contenido del arreglo con punteros:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", *(ptr + i)); 
