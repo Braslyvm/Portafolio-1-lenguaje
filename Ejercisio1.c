@@ -6,7 +6,7 @@ void Ordenar(int a, int b, int c, char ordenar) {
     if (ordenar == 'A' || ordenar == 'a') {
         if (lista[0] > lista[1]){
             int x = lista[0];
-            lista[0] = lista[1];P
+            lista[0] = lista[1];
             lista[1] = x;
         }
         if (lista[0] > lista[2]) {
@@ -40,7 +40,6 @@ void Ordenar(int a, int b, int c, char ordenar) {
         printf("Ordenados de mayor a menor: %d %d %d\n", lista[0], lista[1], lista[2]);
     }
 }
-
 int main() {
     int a, b, c;
     char ordenar;
