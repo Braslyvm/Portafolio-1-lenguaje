@@ -33,9 +33,6 @@ void quienesprimo (int *arreglo, int *n){
 }
 
 
-
-
-
 // funcion que recorra un arrglo por puntero sin el largo 
 void recorrerArreglo (int *arreglo){
     while (*arreglo != 0){
