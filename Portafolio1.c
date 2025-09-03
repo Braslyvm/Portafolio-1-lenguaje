@@ -34,8 +34,6 @@ void paresimpares (int a) {
     }
 }
 
-
-
 // función que recibe un numero decimal y lo separa en parte entera y parte decimal, imprimiendo cada dígito por separado.
 
 void separar (float a){
