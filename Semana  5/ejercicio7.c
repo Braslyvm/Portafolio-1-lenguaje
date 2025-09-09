@@ -4,10 +4,10 @@
 #include <time.h>
 #include <stdbool.h>
 
-int masFrecuente(int *arr, int n) {
+int masFrecuente(int *arr, int *n) {
     int frecuencia[31] = {0};
 
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < *n; i++) {
         frecuencia[arr[i]]++;
     }
 
@@ -50,7 +50,7 @@ int main() {
     }
     printf("\n");
 
-    int resultado = masFrecuente(arr, n);
+    int resultado = masFrecuente(arr, &n);
 
     printf("\nEl número que más se repite es: %d\n", resultado);
 
